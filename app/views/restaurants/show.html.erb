@@ -6,6 +6,15 @@
 </p>
 
 <p>
+  <strong>Reviews:</strong>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+    <li> <%= review.content %> | rating: <%= review.rating %></li>
+    <%end%>
+  </ul>
+</p>
+
+<p>
   <strong>Address:</strong>
   <%= @restaurant.address %>
 </p>
